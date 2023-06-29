@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rkmvc Results</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 100px;
+            }
+            
+            h1 {
+                margin-bottom: 20px;
+            }
+            
+            input[type="number"] {
+                padding: 5px;
+                width: 200px;
+                margin-right: 10px;
+            }
+            
+            input[type="submit"] {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+            
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>UG RESULTS</h1>
+        <p>Enter your last 2 number in your register number</p>
+        <input type="number" id="name">
+        <input type="submit" onclick="redirect(document.getElementById('name').value)">
+
+        <script>
+            function redirect(query) {
+                if (parseInt(query) <= 51 && parseInt(query) >=1) {
+                    window.location.href = `https://rkmvc.ac.in/marksheet/ug/marksheet_ug.php?reg_num=21132810580${query}`;
+                } else {
+                    alert('Invalid register number');
+                }
+            }
+        </script>
+    </body>
+</html>
